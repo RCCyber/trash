@@ -1,0 +1,32 @@
+def general_func(func, i):
+    return func(i)
+
+def input_block(i):
+    while i > 0:
+        name = input("Enter the name of member:")
+        age = int(input("Enter the age of member:\n"))
+        ages[name] = age
+        i -= 1
+    return ages
+
+def input_block2(question1,ages):
+    for k in ages:
+        print(k)
+    question2 = input("About who do you want to know?:\n")
+    print("The age of", question2, "is", ages[question2])
+
+def cycle_block(func, question1):
+    while question1=="y":
+        input_block2(question1, ages)
+        question1 = input("Something else?\ny/n:\n")
+    return end_block()
+
+def end_block():
+    print("Bye bye!!!")
+
+print("Welcome to our mini database")
+ages={}
+i = int(input("How much family do you have?:\n"))
+general_func(input_block, i)
+question1 = input("Do you want to know about our family?\ny/n:\n")
+cycle_block(end_block, question1)

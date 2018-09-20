@@ -1,0 +1,11 @@
+def max_func(x,y):
+    if x>y:
+        print("(x) is much bigger than (y)")
+        return x
+    else:
+        print("(y) is much bigger than (x)")
+        return y
+
+x=int(input("Please, enter something for x:"))
+y=int(input("Please, enter something for y:"))
+max_func(x,y)

@@ -1,0 +1,15 @@
+class SuperTest:
+    def __init__(self, status, age):
+        self.status = status
+        self.age = age
+
+    def Test1(self):
+        print("This is first test message")
+
+class Test(SuperTest):
+    def Test1(self):
+        print("This is second test message")
+
+object1 = Test("testing...", 5)
+print(object1.status)
+object1.Test1()

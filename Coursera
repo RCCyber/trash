@@ -1,0 +1,5 @@
+"""Преобразование чисел в строки"""
+def transform(some_numbers):
+    return list(map(str, some_numbers))
+print(transform(range(10)))
+###

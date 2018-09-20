@@ -1,0 +1,17 @@
+print("Welcome to our mini database")
+ages={}
+i=int(input("How much family do you have?:\n"))
+while i>0:
+    name=input("Enter the name of member:")
+    age=int(input("Enter the age of member:\n"))
+    ages[name]=age
+    i-=1
+question1 = input("Do you want to know about our family?\nY/N:\n")
+while question1=="Y":
+    for k in ages:
+        print(k)
+    question2 = input("About who do you want to know?:\n")
+    print("The age of", question2, "is" ,ages[question2])
+    question1 = input("Something else?\nY/N:\n")
+print("Bye bye!!!")
+

@@ -1,0 +1,9 @@
+try:
+    num1=int(input("Enter some for num1:"))
+    num2=int(input("Enter some for num2:"))
+    print(round(num1/num2,2))
+    print("Done calculation!")
+except ZeroDivisionError:
+    print("An error occured")
+    print("Due to zero division")
+

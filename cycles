@@ -1,0 +1,11 @@
+print("Welcome to our mini database")
+ages={}
+i=int(input("How much family do you have?:\n"))
+while i>0:
+    name=input("Enter the name of member:")
+    age=int(input("Enter the age of member:\n"))
+    ages[name]=age
+    i-=1
+for k in ages:
+    print(k)
+#[i-i+count1]

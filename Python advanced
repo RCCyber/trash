@@ -1,0 +1,45 @@
+def fun_module():
+    print("This is a module function")
+if __name__=="__main__":
+    print("This is a script")
+def function(named_arg, *args, **kvargs):   ## Применение множественных переменных и переменных со значением
+    named_arg = args
+    print(named_arg[0])
+    print(args)
+    print(kvargs)
+    x, y = kvargs   ## Распаковка кортежа в отдельные переменные
+    print(x)
+    print(y)
+function("cortej",1,2,3,4,5, a=7, b=12)
+print("##########################")
+a = 7
+c = 2 if a>=5 else 44   ## Тернарный оператор
+print(c)
+print("##########################")
+for i in range(10):
+    if i == 999:
+        break
+else:
+    print("Unbroken1")
+for i in range(10):
+    if i == 5:
+        break
+else:
+    print("Unbroken2")
+print("##########################")
+try:                                    ## Использование else, в отношении try/except
+    print(1)
+except ZeroDivisionError:
+ print(2)
+else:
+ print(3)
+try:
+    print(1/0)
+except ZeroDivisionError:
+    print(4)
+else:
+    print(5)
+print("##########################")
+fun_module()
+
+
