@@ -1,7 +1,9 @@
 from mysql.connector import errorcode
 import mysql.connector
+from functools import reduce
 
-from http.server import HTTPServer, BaseHTTPRequestHandler
+
+# from http.server import HTTPServer, BaseHTTPRequestHandler
 
 
 class ConnectCheck:
@@ -47,25 +49,28 @@ class ConnectCheck:
         return self.end_block()
 
     def show_select(self):
-        for (name) in self.cursor:
-            print(name)
-            print(self.cursor)
+        with open('D:\Python\log.txt', 'w') as f:
+            for (name) in self.cursor:
+                print(name)
+                f.write(''.join(str(name)))
+        f.close()
 
     def end_block(self):
         print("Bye bye!!!")
 
 
-#class HttpServer(BaseHTTPRequestHandler):
+
+# class HttpServer(BaseHTTPRequestHandler):
 
 #    def do_get(self):
 #        self.send_response(200)
 #        self.send_header('content-type', 'text/html')
- #       self.end_headers()
- #       self.wfile.write("<html><body><h1>hi!</h1></body></html>")
+#       self.end_headers()
+#       self.wfile.write("<html><body><h1>hi!</h1></body></html>")
 
 
-#server = HTTPServer(("localhost", 8080), HttpServer)
-#server.serve_forever()
+# server = HTTPServer(("localhost", 8080), HttpServer)
+# server.serve_forever()
 
 query = ConnectCheck(input("Enter db user "), input("Enter db pass "), input("Enter db port "),
                      input("Enter db name "),
