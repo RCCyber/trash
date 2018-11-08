@@ -1,4 +1,4 @@
-import pyodbc
+import psycopg2
 
 conn = pyodbc.connect('DRIVER={SQL Server};SERVER=*;DATABASE=*;UID=*;PWD=*')
 cursor = conn.cursor()
